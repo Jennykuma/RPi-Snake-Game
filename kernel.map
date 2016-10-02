@@ -1,0 +1,483 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/arrow.o
+LOAD build/blackBox.o
+LOAD build/blackbox.o
+LOAD build/blueblock.o
+LOAD build/border_1.o
+LOAD build/bow.o
+LOAD build/brick.o
+LOAD build/circle3.o
+LOAD build/cornerblack.o
+LOAD build/cornerCursor.o
+LOAD build/Detection.o
+LOAD build/divideQuotient.o
+LOAD build/DrawChar.o
+LOAD build/drawHomeScreen.o
+LOAD build/Drawing.o
+LOAD build/drawLives.o
+LOAD build/DrawScore2.o
+LOAD build/female-pepe.o
+LOAD build/framebuffer.o
+LOAD build/heartCursor.o
+LOAD build/heart.o
+LOAD build/homescreen.o
+LOAD build/innerBrick.o
+LOAD build/jtag.o
+LOAD build/LoseScreen.o
+LOAD build/main.o
+LOAD build/map_1.o
+LOAD build/map_2.o
+LOAD build/PauseMenu.o
+LOAD build/pausemenu.o
+LOAD build/pepe-bitmap-structure.o
+LOAD build/pepedown.o
+LOAD build/peperight.o
+LOAD build/pepeup.o
+LOAD build/random.o
+LOAD build/removeLives.o
+LOAD build/sadpepe.o
+LOAD build/SnakeOperations.o
+LOAD build/Snes.o
+LOAD build/StoryScreen.o
+LOAD build/ValuePackInterupt.o
+LOAD build/ValuePack.o
+LOAD build/WinScreen.o
+
+.init           0x0000000000008000        0x4
+ *(.init)
+ .init          0x0000000000008000        0x4 build/main.o
+                0x0000000000008000                _start
+
+.data           0x0000000000009080     0x1c5c
+ *(.data)
+ .data          0x0000000000009080        0x0 build/arrow.o
+ .data          0x0000000000009080        0x0 build/blackBox.o
+ .data          0x0000000000009080        0x0 build/blackbox.o
+ .data          0x0000000000009080        0x0 build/blueblock.o
+ .data          0x0000000000009080        0x0 build/border_1.o
+ .data          0x0000000000009080        0x0 build/bow.o
+ .data          0x0000000000009080        0x0 build/brick.o
+ .data          0x0000000000009080        0x0 build/circle3.o
+ .data          0x0000000000009080        0x0 build/cornerblack.o
+ .data          0x0000000000009080        0x0 build/cornerCursor.o
+ .data          0x0000000000009080        0x0 build/Detection.o
+ .data          0x0000000000009080        0x0 build/divideQuotient.o
+ .data          0x0000000000009080      0x800 build/DrawChar.o
+ .data          0x0000000000009880        0x0 build/drawHomeScreen.o
+ .data          0x0000000000009880        0x0 build/Drawing.o
+ .data          0x0000000000009880        0x0 build/drawLives.o
+ .data          0x0000000000009880      0x800 build/DrawScore2.o
+ .data          0x000000000000a080        0x0 build/female-pepe.o
+ .data          0x000000000000a080       0x34 build/framebuffer.o
+                0x000000000000a0b0                FrameBufferPointer
+ .data          0x000000000000a0b4        0x0 build/heartCursor.o
+ .data          0x000000000000a0b4        0x0 build/heart.o
+ .data          0x000000000000a0b4        0x0 build/homescreen.o
+ .data          0x000000000000a0b4        0x0 build/innerBrick.o
+ .data          0x000000000000a0b4        0x0 build/jtag.o
+ .data          0x000000000000a0b4        0x0 build/LoseScreen.o
+ *fill*         0x000000000000a0b4        0xc 3f3f3f3f
+ .data          0x000000000000a0c0      0xc1c build/main.o
+                0x000000000000a8c0                gameState
+                0x000000000000a8dc                snake
+ .data          0x000000000000acdc        0x0 build/map_1.o
+ .data          0x000000000000acdc        0x0 build/map_2.o
+ .data          0x000000000000acdc        0x0 build/PauseMenu.o
+ .data          0x000000000000acdc        0x0 build/pausemenu.o
+ .data          0x000000000000acdc        0x0 build/pepe-bitmap-structure.o
+ .data          0x000000000000acdc        0x0 build/pepedown.o
+ .data          0x000000000000acdc        0x0 build/peperight.o
+ .data          0x000000000000acdc        0x0 build/pepeup.o
+ .data          0x000000000000acdc        0x0 build/random.o
+ .data          0x000000000000acdc        0x0 build/removeLives.o
+ .data          0x000000000000acdc        0x0 build/sadpepe.o
+ .data          0x000000000000acdc        0x0 build/SnakeOperations.o
+ .data          0x000000000000acdc        0x0 build/Snes.o
+ .data          0x000000000000acdc        0x0 build/StoryScreen.o
+ .data          0x000000000000acdc        0x0 build/ValuePackInterupt.o
+ .data          0x000000000000acdc        0x0 build/ValuePack.o
+ .data          0x000000000000acdc        0x0 build/WinScreen.o
+ *.c.o(*)
+
+.igot.plt       0x000000000000acdc        0x0
+ .igot.plt      0x0000000000000000        0x0 build/border_1.o
+
+.text           0x000000000000acdc   0x613130
+ *.c.o(.text)
+ *(.text)
+ .text          0x000000000000acdc      0x800 build/arrow.o
+                0x000000000000acdc                arrow
+ .text          0x000000000000b4dc      0x800 build/blackBox.o
+                0x000000000000b4dc                blackbox
+ .text          0x000000000000bcdc      0x800 build/blackbox.o
+                0x000000000000bcdc                box
+ .text          0x000000000000c4dc      0x800 build/blueblock.o
+                0x000000000000c4dc                bluebox
+ .text          0x000000000000ccdc       0xac build/border_1.o
+                0x000000000000ccdc                Border
+ .text          0x000000000000cd88      0x800 build/bow.o
+                0x000000000000cd88                bow
+ .text          0x000000000000d588      0x800 build/brick.o
+                0x000000000000d588                brick
+ .text          0x000000000000dd88      0x800 build/circle3.o
+                0x000000000000dd88                body
+ .text          0x000000000000e588      0x800 build/cornerblack.o
+                0x000000000000e588                cornerblack
+ .text          0x000000000000ed88      0x800 build/cornerCursor.o
+                0x000000000000ed88                cornercursor
+ .text          0x000000000000f588      0x1b8 build/Detection.o
+                0x000000000000f588                DetectBow
+                0x000000000000f5f4                DetectCollision
+                0x000000000000f65c                DetectFemalePepe
+                0x000000000000f6c8                DetectValuePack
+ .text          0x000000000000f740       0x80 build/divideQuotient.o
+                0x000000000000f740                division
+                0x000000000000f778                newDiv
+ .text          0x000000000000f7c0      0x144 build/DrawChar.o
+                0x000000000000f7c0                DrawChar
+ .text          0x000000000000f904      0x158 build/drawHomeScreen.o
+                0x000000000000f904                homescreenstart
+ .text          0x000000000000fa5c       0xac build/Drawing.o
+                0x000000000000fa5c                DrawPixel
+                0x000000000000fa7c                DrawPicture
+                0x000000000000fae4                LoadPixel
+ .text          0x000000000000fb08       0x50 build/drawLives.o
+                0x000000000000fb08                drawLives
+ .text          0x000000000000fb58      0x10c build/DrawScore2.o
+                0x000000000000fb58                DrawScore2
+ .text          0x000000000000fc64     0x1000 build/female-pepe.o
+                0x000000000000fc64                femalePepe
+ .text          0x0000000000010c64       0x70 build/framebuffer.o
+                0x0000000000010c64                InitFrameBuffer
+ .text          0x0000000000010cd4      0x800 build/heartCursor.o
+                0x0000000000010cd4                cursor
+ .text          0x00000000000114d4      0x800 build/heart.o
+                0x00000000000114d4                heart
+ .text          0x0000000000011cd4   0x180000 build/homescreen.o
+                0x0000000000011cd4                homescreen
+ .text          0x0000000000191cd4      0x800 build/innerBrick.o
+                0x0000000000191cd4                innerBrick
+ .text          0x00000000001924d4       0x8c build/jtag.o
+                0x00000000001924d4                EnableJTAG
+ .text          0x0000000000192560   0x180000 build/LoseScreen.o
+                0x0000000000192560                losescreen
+ .text          0x0000000000312560      0x3cc build/main.o
+                0x00000000003127d4                haltLoop$
+                0x00000000003128b8                clearScreen
+ .text          0x000000000031292c      0x164 build/map_1.o
+                0x000000000031292c                map
+ .text          0x0000000000312a90       0xd4 build/map_2.o
+                0x0000000000312a90                map2
+ .text          0x0000000000312b64      0x158 build/PauseMenu.o
+                0x0000000000312b64                startMenu
+ .text          0x0000000000312cbc     0x7800 build/pausemenu.o
+                0x0000000000312cbc                pauseMenu
+ .text          0x000000000031a4bc      0x800 build/pepe-bitmap-structure.o
+                0x000000000031a4bc                pepe
+ .text          0x000000000031acbc      0x800 build/pepedown.o
+                0x000000000031acbc                pepedown
+ .text          0x000000000031b4bc      0x800 build/peperight.o
+                0x000000000031b4bc                peperight
+ .text          0x000000000031bcbc      0x800 build/pepeup.o
+                0x000000000031bcbc                pepeup
+ .text          0x000000000031c4bc      0x1f0 build/random.o
+                0x000000000031c4bc                random
+                0x000000000031c554                door
+                0x000000000031c604                ValPack
+ .text          0x000000000031c6ac       0xa0 build/removeLives.o
+                0x000000000031c6ac                removeLives
+ .text          0x000000000031c74c      0x800 build/sadpepe.o
+                0x000000000031c74c                sadpepe
+ .text          0x000000000031cf4c      0x1d4 build/SnakeOperations.o
+                0x000000000031cf4c                InsertBody
+                0x000000000031cf80                DrawSnake
+                0x000000000031d05c                UpdateSnake
+                0x000000000031d0c0                InsertPosition
+                0x000000000031d0e0                LoadPosition
+ .text          0x000000000031d120      0x390 build/Snes.o
+                0x000000000031d120                GetMenuDirection
+                0x000000000031d188                IsOppositeDir
+                0x000000000031d210                GetDirection
+                0x000000000031d314                ReadSnes
+                0x000000000031d3d0                Init_GPIO
+                0x000000000031d41c                Write_Latch
+                0x000000000031d438                Write_Clock
+                0x000000000031d454                Read_Data
+                0x000000000031d484                Wait
+ .text          0x000000000031d4b0   0x180000 build/StoryScreen.o
+                0x000000000031d4b0                storyScreen
+ .text          0x000000000049d4b0      0x15c build/ValuePackInterupt.o
+                0x000000000049d4b0                initValPack
+                0x000000000049d4e8                InstallInteruptTable
+                0x000000000049d580                disableIrq
+                0x000000000049d598                enableIrq
+ .text          0x000000000049d60c      0x800 build/ValuePack.o
+                0x000000000049d60c                valueFork
+ .text          0x000000000049de0c   0x180000 build/WinScreen.o
+                0x000000000049de0c                winscreen
+OUTPUT(build/output.elf elf32-littlearm)
+
+.glue_7         0x000000000061de0c        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x000000000061de0c        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x000000000061de0c        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x000000000061de0c        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x000000000061de0c        0x0
+ .iplt          0x0000000000000000        0x0 build/border_1.o
+
+.rel.dyn        0x000000000061de0c        0x0
+ .rel.iplt      0x0000000000000000        0x0 build/border_1.o
+
+.bss            0x000000000061de0c        0x0
+ .bss           0x000000000061de0c        0x0 build/arrow.o
+ .bss           0x000000000061de0c        0x0 build/blackBox.o
+ .bss           0x000000000061de0c        0x0 build/blackbox.o
+ .bss           0x000000000061de0c        0x0 build/blueblock.o
+ .bss           0x000000000061de0c        0x0 build/border_1.o
+ .bss           0x000000000061de0c        0x0 build/bow.o
+ .bss           0x000000000061de0c        0x0 build/brick.o
+ .bss           0x000000000061de0c        0x0 build/circle3.o
+ .bss           0x000000000061de0c        0x0 build/cornerblack.o
+ .bss           0x000000000061de0c        0x0 build/cornerCursor.o
+ .bss           0x000000000061de0c        0x0 build/Detection.o
+ .bss           0x000000000061de0c        0x0 build/divideQuotient.o
+ .bss           0x000000000061de0c        0x0 build/DrawChar.o
+ .bss           0x000000000061de0c        0x0 build/drawHomeScreen.o
+ .bss           0x000000000061de0c        0x0 build/Drawing.o
+ .bss           0x000000000061de0c        0x0 build/drawLives.o
+ .bss           0x000000000061de0c        0x0 build/DrawScore2.o
+ .bss           0x000000000061de0c        0x0 build/female-pepe.o
+ .bss           0x000000000061de0c        0x0 build/framebuffer.o
+ .bss           0x000000000061de0c        0x0 build/heartCursor.o
+ .bss           0x000000000061de0c        0x0 build/heart.o
+ .bss           0x000000000061de0c        0x0 build/homescreen.o
+ .bss           0x000000000061de0c        0x0 build/innerBrick.o
+ .bss           0x000000000061de0c        0x0 build/jtag.o
+ .bss           0x000000000061de0c        0x0 build/LoseScreen.o
+ .bss           0x000000000061de0c        0x0 build/main.o
+ .bss           0x000000000061de0c        0x0 build/map_1.o
+ .bss           0x000000000061de0c        0x0 build/map_2.o
+ .bss           0x000000000061de0c        0x0 build/PauseMenu.o
+ .bss           0x000000000061de0c        0x0 build/pausemenu.o
+ .bss           0x000000000061de0c        0x0 build/pepe-bitmap-structure.o
+ .bss           0x000000000061de0c        0x0 build/pepedown.o
+ .bss           0x000000000061de0c        0x0 build/peperight.o
+ .bss           0x000000000061de0c        0x0 build/pepeup.o
+ .bss           0x000000000061de0c        0x0 build/random.o
+ .bss           0x000000000061de0c        0x0 build/removeLives.o
+ .bss           0x000000000061de0c        0x0 build/sadpepe.o
+ .bss           0x000000000061de0c        0x0 build/SnakeOperations.o
+ .bss           0x000000000061de0c        0x0 build/Snes.o
+ .bss           0x000000000061de0c        0x0 build/StoryScreen.o
+ .bss           0x000000000061de0c        0x0 build/ValuePackInterupt.o
+ .bss           0x000000000061de0c        0x0 build/ValuePack.o
+ .bss           0x000000000061de0c        0x0 build/WinScreen.o
+
+.ARM.attributes
+                0x0000000000000000       0x26
+ .ARM.attributes
+                0x0000000000000000       0x26 build/arrow.o
+ .ARM.attributes
+                0x0000000000000026       0x26 build/blackBox.o
+ .ARM.attributes
+                0x000000000000004c       0x26 build/blackbox.o
+ .ARM.attributes
+                0x0000000000000072       0x26 build/blueblock.o
+ .ARM.attributes
+                0x0000000000000098       0x26 build/border_1.o
+ .ARM.attributes
+                0x00000000000000be       0x26 build/bow.o
+ .ARM.attributes
+                0x00000000000000e4       0x26 build/brick.o
+ .ARM.attributes
+                0x000000000000010a       0x26 build/circle3.o
+ .ARM.attributes
+                0x0000000000000130       0x26 build/cornerblack.o
+ .ARM.attributes
+                0x0000000000000156       0x26 build/cornerCursor.o
+ .ARM.attributes
+                0x000000000000017c       0x26 build/Detection.o
+ .ARM.attributes
+                0x00000000000001a2       0x26 build/divideQuotient.o
+ .ARM.attributes
+                0x00000000000001c8       0x26 build/DrawChar.o
+ .ARM.attributes
+                0x00000000000001ee       0x26 build/drawHomeScreen.o
+ .ARM.attributes
+                0x0000000000000214       0x26 build/Drawing.o
+ .ARM.attributes
+                0x000000000000023a       0x26 build/drawLives.o
+ .ARM.attributes
+                0x0000000000000260       0x26 build/DrawScore2.o
+ .ARM.attributes
+                0x0000000000000286       0x26 build/female-pepe.o
+ .ARM.attributes
+                0x00000000000002ac       0x26 build/framebuffer.o
+ .ARM.attributes
+                0x00000000000002d2       0x26 build/heartCursor.o
+ .ARM.attributes
+                0x00000000000002f8       0x26 build/heart.o
+ .ARM.attributes
+                0x000000000000031e       0x26 build/homescreen.o
+ .ARM.attributes
+                0x0000000000000344       0x26 build/innerBrick.o
+ .ARM.attributes
+                0x000000000000036a       0x26 build/jtag.o
+ .ARM.attributes
+                0x0000000000000390       0x26 build/LoseScreen.o
+ .ARM.attributes
+                0x00000000000003b6       0x26 build/main.o
+ .ARM.attributes
+                0x00000000000003dc       0x26 build/map_1.o
+ .ARM.attributes
+                0x0000000000000402       0x26 build/map_2.o
+ .ARM.attributes
+                0x0000000000000428       0x26 build/PauseMenu.o
+ .ARM.attributes
+                0x000000000000044e       0x26 build/pausemenu.o
+ .ARM.attributes
+                0x0000000000000474       0x26 build/pepe-bitmap-structure.o
+ .ARM.attributes
+                0x000000000000049a       0x26 build/pepedown.o
+ .ARM.attributes
+                0x00000000000004c0       0x26 build/peperight.o
+ .ARM.attributes
+                0x00000000000004e6       0x26 build/pepeup.o
+ .ARM.attributes
+                0x000000000000050c       0x26 build/random.o
+ .ARM.attributes
+                0x0000000000000532       0x26 build/removeLives.o
+ .ARM.attributes
+                0x0000000000000558       0x26 build/sadpepe.o
+ .ARM.attributes
+                0x000000000000057e       0x26 build/SnakeOperations.o
+ .ARM.attributes
+                0x00000000000005a4       0x26 build/Snes.o
+ .ARM.attributes
+                0x00000000000005ca       0x26 build/StoryScreen.o
+ .ARM.attributes
+                0x00000000000005f0       0x26 build/ValuePackInterupt.o
+ .ARM.attributes
+                0x0000000000000616       0x26 build/ValuePack.o
+ .ARM.attributes
+                0x000000000000063c       0x26 build/WinScreen.o
+
+.debug_line     0x0000000000000000      0xba2
+ .debug_line    0x0000000000000000       0x6b build/border_1.o
+ .debug_line    0x000000000000006b       0xbb build/Detection.o
+ .debug_line    0x0000000000000126       0x64 build/divideQuotient.o
+ .debug_line    0x000000000000018a       0x97 build/DrawChar.o
+ .debug_line    0x0000000000000221       0xa1 build/drawHomeScreen.o
+ .debug_line    0x00000000000002c2       0x6f build/Drawing.o
+ .debug_line    0x0000000000000331       0x55 build/drawLives.o
+ .debug_line    0x0000000000000386       0x8a build/DrawScore2.o
+ .debug_line    0x0000000000000410       0x64 build/framebuffer.o
+ .debug_line    0x0000000000000474       0x61 build/jtag.o
+ .debug_line    0x00000000000004d5      0x150 build/main.o
+ .debug_line    0x0000000000000625       0x97 build/map_1.o
+ .debug_line    0x00000000000006bc       0x73 build/map_2.o
+ .debug_line    0x000000000000072f       0xa2 build/PauseMenu.o
+ .debug_line    0x00000000000007d1       0xc3 build/random.o
+ .debug_line    0x0000000000000894       0x6d build/removeLives.o
+ .debug_line    0x0000000000000901       0xce build/SnakeOperations.o
+ .debug_line    0x00000000000009cf      0x133 build/Snes.o
+ .debug_line    0x0000000000000b02       0xa0 build/ValuePackInterupt.o
+
+.debug_info     0x0000000000000000      0x6a9
+ .debug_info    0x0000000000000000       0x59 build/border_1.o
+ .debug_info    0x0000000000000059       0x5a build/Detection.o
+ .debug_info    0x00000000000000b3       0x5f build/divideQuotient.o
+ .debug_info    0x0000000000000112       0x59 build/DrawChar.o
+ .debug_info    0x000000000000016b       0x5f build/drawHomeScreen.o
+ .debug_info    0x00000000000001ca       0x58 build/Drawing.o
+ .debug_info    0x0000000000000222       0x5a build/drawLives.o
+ .debug_info    0x000000000000027c       0x5b build/DrawScore2.o
+ .debug_info    0x00000000000002d7       0x5c build/framebuffer.o
+ .debug_info    0x0000000000000333       0x55 build/jtag.o
+ .debug_info    0x0000000000000388       0x51 build/main.o
+ .debug_info    0x00000000000003d9       0x56 build/map_1.o
+ .debug_info    0x000000000000042f       0x56 build/map_2.o
+ .debug_info    0x0000000000000485       0x5a build/PauseMenu.o
+ .debug_info    0x00000000000004df       0x57 build/random.o
+ .debug_info    0x0000000000000536       0x5c build/removeLives.o
+ .debug_info    0x0000000000000592       0x60 build/SnakeOperations.o
+ .debug_info    0x00000000000005f2       0x55 build/Snes.o
+ .debug_info    0x0000000000000647       0x62 build/ValuePackInterupt.o
+
+.debug_abbrev   0x0000000000000000      0x17a
+ .debug_abbrev  0x0000000000000000       0x14 build/border_1.o
+ .debug_abbrev  0x0000000000000014       0x14 build/Detection.o
+ .debug_abbrev  0x0000000000000028       0x14 build/divideQuotient.o
+ .debug_abbrev  0x000000000000003c       0x14 build/DrawChar.o
+ .debug_abbrev  0x0000000000000050       0x14 build/drawHomeScreen.o
+ .debug_abbrev  0x0000000000000064       0x14 build/Drawing.o
+ .debug_abbrev  0x0000000000000078       0x14 build/drawLives.o
+ .debug_abbrev  0x000000000000008c       0x14 build/DrawScore2.o
+ .debug_abbrev  0x00000000000000a0       0x14 build/framebuffer.o
+ .debug_abbrev  0x00000000000000b4       0x14 build/jtag.o
+ .debug_abbrev  0x00000000000000c8       0x12 build/main.o
+ .debug_abbrev  0x00000000000000da       0x14 build/map_1.o
+ .debug_abbrev  0x00000000000000ee       0x14 build/map_2.o
+ .debug_abbrev  0x0000000000000102       0x14 build/PauseMenu.o
+ .debug_abbrev  0x0000000000000116       0x14 build/random.o
+ .debug_abbrev  0x000000000000012a       0x14 build/removeLives.o
+ .debug_abbrev  0x000000000000013e       0x14 build/SnakeOperations.o
+ .debug_abbrev  0x0000000000000152       0x14 build/Snes.o
+ .debug_abbrev  0x0000000000000166       0x14 build/ValuePackInterupt.o
+
+.debug_aranges  0x0000000000000000      0x268
+ .debug_aranges
+                0x0000000000000000       0x20 build/border_1.o
+ .debug_aranges
+                0x0000000000000020       0x20 build/Detection.o
+ .debug_aranges
+                0x0000000000000040       0x20 build/divideQuotient.o
+ .debug_aranges
+                0x0000000000000060       0x20 build/DrawChar.o
+ .debug_aranges
+                0x0000000000000080       0x20 build/drawHomeScreen.o
+ .debug_aranges
+                0x00000000000000a0       0x20 build/Drawing.o
+ .debug_aranges
+                0x00000000000000c0       0x20 build/drawLives.o
+ .debug_aranges
+                0x00000000000000e0       0x20 build/DrawScore2.o
+ .debug_aranges
+                0x0000000000000100       0x20 build/framebuffer.o
+ .debug_aranges
+                0x0000000000000120       0x20 build/jtag.o
+ .debug_aranges
+                0x0000000000000140       0x28 build/main.o
+ .debug_aranges
+                0x0000000000000168       0x20 build/map_1.o
+ .debug_aranges
+                0x0000000000000188       0x20 build/map_2.o
+ .debug_aranges
+                0x00000000000001a8       0x20 build/PauseMenu.o
+ .debug_aranges
+                0x00000000000001c8       0x20 build/random.o
+ .debug_aranges
+                0x00000000000001e8       0x20 build/removeLives.o
+ .debug_aranges
+                0x0000000000000208       0x20 build/SnakeOperations.o
+ .debug_aranges
+                0x0000000000000228       0x20 build/Snes.o
+ .debug_aranges
+                0x0000000000000248       0x20 build/ValuePackInterupt.o
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 build/main.o
